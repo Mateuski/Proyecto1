@@ -1,15 +1,10 @@
 <mat-toolbar>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
+        <mat-icon><img src=""></mat-icon>
     </button>
-    <span>G3B</span>
+    <span><button mat-button routerLink="/inicio">STOM</button></span>
     <button mat-button routerLink="/inicio">Inicio</button>
 
-
-    <button mat-button [matMenuTriggerFor]="producto">Productos</button>
-    <mat-menu #producto="matMenu">
-        <button mat-menu-item routerLink="/producto">General</button>
-    </mat-menu>
 
 
     <span class="example-spacer"></span>

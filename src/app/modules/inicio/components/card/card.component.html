@@ -1,8 +1,21 @@
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+<div *ngFor="let i of info">
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{i.imagen}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h4 class="card-title"><b>{{i.nombre}}</b>
+            <p class="card-text"><small class="text-body-secondary">{{i.lanzamiento}}</small></p></h4>
+            <p class="card-text"><small class="text-body-secondary">Genero: {{i.genero}}</small></p>
+          <p class="card-text">{{i.descripcion}}</p>
+          <br>
+          <p class="card-text"><small class="text-body-secondary">Desarrollador: {{i.desarrollador}}</small></p>
+          <p class="card-text"><small class="text-body-secondary">Editor: {{i.editor}}</small></p>
+          <p class="card-text">${{i.precio}} USD <a href="#" class="btn btn-primary">Añadir al carrito</a></p>
+  
+        </div>
+      </div>
     </div>
-  </div>
+</div>
