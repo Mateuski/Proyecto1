@@ -1,21 +1,20 @@
-<div *ngFor="let i of info">
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="{{i.imagen}}" class="img-fluid rounded-start" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h4 class="card-title"><b>{{i.nombre}}</b>
-            <p class="card-text"><small class="text-body-secondary">{{i.lanzamiento}}</small></p></h4>
-            <p class="card-text"><small class="text-body-secondary">Genero: {{i.genero}}</small></p>
-          <p class="card-text">{{i.descripcion}}</p>
-          <br>
-          <p class="card-text"><small class="text-body-secondary">Desarrollador: {{i.desarrollador}}</small></p>
-          <p class="card-text"><small class="text-body-secondary">Editor: {{i.editor}}</small></p>
-          <p class="card-text">${{i.precio}} USD <a href="#" class="btn btn-primary">Añadir al carrito</a></p>
-  
-        </div>
-      </div>
+<br>
+<h2 align="center"><b>Mas vendidos y Tendencias</b></h2>
+<br>
+<div class="conteiner">
+  <div class="col-12">
+  <div *ngFor="let i of info" class="contenido">
+  <div class="card">
+    <img src="{{i.imagen}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h4 class="card-title"><b>{{i.nombre}}</b>
+        <p class="card-text"><small class="text-body-secondary">{{i.lanzamiento}}</small></p></h4>
+        <p class="card-text"><small class="text-body-secondary">ɢᴇɴᴇʀᴏ: {{i.genero}}</small></p>
+      <p class="card-text">{{i.descripcion}}</p>
+      <p class="card-text"><small class="text-body-secondary">ᴅᴇꜱᴀʀʀᴏʟʟᴀᴅᴏʀ: {{i.desarrollador}}</small></p>
+      <p class="card-text"><small class="text-body-secondary">ᴇᴅɪᴛᴏʀ: {{i.editor}}</small></p>
+      <p class="card-text">${{i.precio}} USD <a href="#" class="btn btn-primary">Añadir al carrito</a></p>
+     </div>
     </div>
+  </div>
 </div>
