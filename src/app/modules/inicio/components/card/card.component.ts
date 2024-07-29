@@ -44,6 +44,7 @@ export class CardComponent {
   desarrollador: "Quantic Dream",
   editor:"Quantic Dream", 
 },
+/*
 {
   id: "",
   nombre: "Ready or Not",
@@ -66,6 +67,7 @@ export class CardComponent {
   desarrollador: "",
   editor:"", 
 },
+*/
     ]
   }
 }

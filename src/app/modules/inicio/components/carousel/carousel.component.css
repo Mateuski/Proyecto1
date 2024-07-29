@@ -1,10 +1,9 @@
-h3{
+h1{
     color: white;
+    text-align: center;
 }
 .carrusel{
-    width: 75%;
-    height: 90%;
-    margin: 25px;
-    align-items: center; 
-    display: block;   
+    margin: 20px;
+    justify-content: center;    
+    display: block;
 }

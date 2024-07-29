@@ -1,4 +1,13 @@
+footer{
+    height: 15%;
+}
+
 p{
-    background-color: rgb(13, 77, 138);
+    background-color: rgb(38, 40, 41);
     color: white;
+    text-align: center;
+}
+img{
+    width: 2%;
+    height: 2%;
 }
