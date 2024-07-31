@@ -4,7 +4,7 @@ import { NavbarComponent } from './modules/shared/componentes/navbar/navbar.comp
 import { InicioComponent } from './modules/inicio/page/inicio/inicio.component';
 
 const routes: Routes = [
-{path:"", component: InicioComponent },
+{path:"", component: InicioComponent }, 
 {
   path:"",loadChildren:()=>import('./modules/inicio/inicio.module').then(m=>m.InicioModule)
 },
@@ -13,7 +13,7 @@ const routes: Routes = [
 },
 {
   path:"",loadChildren:()=>import('./modules/autentificacion/autentificacion.module').then(m=>m.AutentificacionModule)
-}
+},
 ];
 
 @NgModule({
