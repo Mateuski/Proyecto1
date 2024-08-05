@@ -147,7 +147,7 @@ export class IniciosesionComponent {
       }
 
       const res = await this.servicioAuth.iniciarSesion(credenciales.email, credenciales.password)
-        .then(res => {
+        .then((res: any) => {
           Swal.fire({
             title: "¡Buen trabajo!",
             text: "¡Se pudo ingresar con éxito :)!",
