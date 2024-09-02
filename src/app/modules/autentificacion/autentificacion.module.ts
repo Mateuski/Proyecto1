@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// ARCHIVO DE RUTAS HIJAS
 import { AutentificacionRoutingModule } from './autentificacion-routing.module';
-import { IniciosesionComponent } from './page/iniciosesion/iniciosesion.component';
+
+// VISTAS DE AUTENTIFICACIÓN
 import { RegistroComponent } from './page/registro/registro.component';
+import { IniciosesionComponent } from './page/iniciosesion/iniciosesion.component';
+
 // COMPONENTES DE MATERIAL
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';

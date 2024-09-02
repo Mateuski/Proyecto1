@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Usuario } from 'src/app/models/usuario';
-import { AuthService } from '../../page/services/auth.service';
+import { AuthService } from '../services/auth.service';
 import { FirestoreService } from 'src/app/modules/shared/services/firestore.service';
 import { Router } from '@angular/router';
 import * as CryptoJS from 'crypto-js';
@@ -147,7 +147,7 @@ export class IniciosesionComponent {
       }
 
       const res = await this.servicioAuth.iniciarSesion(credenciales.email, credenciales.password)
-        .then((res: any) => {
+        .then(res => {
           Swal.fire({
             title: "¡Buen trabajo!",
             text: "¡Se pudo ingresar con éxito :)!",

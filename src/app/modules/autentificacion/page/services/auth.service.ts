@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
+// Servicio en la nube de autentificación de Firebase
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+// Accedemos directamente al servicio Firestore
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Injectable({
