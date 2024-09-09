@@ -1,0 +1,27 @@
+
+h2{
+    color: white;
+    text-align: center;
+}
+.imagencard{
+    width: 100%;
+    height: 135px;
+    border-radius: 2%;
+}
+.card{
+    width: 400px;
+    height: 450px;
+    display: block;
+    text-align: left;
+}
+.contenido{
+    padding: 1%;
+    border-radius: 1%;
+    margin: 5%; 
+    border: 1px solid rgb(0, 174, 255);
+    display: flex;
+}
+.mg-3{
+    text-align: center;
+    margin: 10px;
+}

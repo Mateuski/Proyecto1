@@ -8,7 +8,7 @@ import { CrudService } from '../../service/crud.service';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
-export class Tablecomponent {
+export class TableComponent {
   // Creamos colección local de productos -> la definimos como array
   coleccionProductos: Producto[] = [];
 

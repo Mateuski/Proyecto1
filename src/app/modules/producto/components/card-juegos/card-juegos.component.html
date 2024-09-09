@@ -5,7 +5,7 @@
       <div class="card-body">
         <h5 class="card-title">{{productos.imagen}}</h5>
   
-          <p class="card-text">{{productos.precio}}</p>
+          <p class="card-text">$ {{productos.precio}}</p>
           <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#verMas" (click)="mostrarVer(productos)">Ver más</button>
       </div>
     </div>
@@ -36,7 +36,7 @@
           {{productoSeleccionado.lanzamiento}}
         </div>
         <div class="mg-3">
-          {{productoSeleccionado.precio}}
+         $ {{productoSeleccionado.precio}}
         </div>
         
         <div class="modal-footer">

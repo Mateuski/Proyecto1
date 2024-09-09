@@ -7,7 +7,7 @@ import { AdminRoutingModule } from './admin-routing.module';
 // Vista
 import { AdminComponent } from './pages/admin/admin.component';
 
-import { Tablecomponent } from './components/table/table.component';
+import { TableComponent } from './components/table/table.component';
 
 // Paqueterías para formularios y formularios reactivos
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -18,7 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     AdminComponent,
-    Tablecomponent
+    TableComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +29,7 @@ import { MatIconModule } from '@angular/material/icon';
   ],
   exports:[
     AdminComponent,
-    Tablecomponent,
+    TableComponent,
     FormsModule,
     ReactiveFormsModule,
     MatIconModule
