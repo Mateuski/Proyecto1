@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CardJuegosComponent } from './card-juegos.component';
+import { CardJuegosComponent } from './card-dlc.component';
 
 describe('CardJuegosComponent', () => {
   let component: CardJuegosComponent;

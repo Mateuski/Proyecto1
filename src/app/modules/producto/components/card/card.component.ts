@@ -11,6 +11,8 @@ export class CardComponent {
 // Definimos coleccion de productos locales
   coleccionProductos: Producto[] = [];
 
+  coleccionJuegos: Producto[] = []
+
 // Variable local para manejar estado de un modal
   productoSeleccionado!: Producto;
 
@@ -22,17 +24,27 @@ constructor(public servicioCrud: CrudService){}
 ngOnInit(): void{
   this.servicioCrud.obtenerProducto().subscribe(producto => {
     this.coleccionProductos = producto;
+
+    this.mostrarProductosJuegos();
+  })
+
+  
+}
+ // Funcion para filtrar los productos de tipo "juegos"
+ mostrarProductosJuegos(){
+  this.coleccionJuegos.forEach(Producto => {
+    // Si es de un tipo de "juego" -> condicional
+    if(Producto.categoria !== "Dlc" && Producto.categoria !== "SoundTracks"){
+
+    // Lo sube/ guarda en la coleccion de productos de tipo "juegos"  
+    this.coleccionJuegos.push(Producto)
+    }
   })
 }
 
-// Funcion para mostrar mas informacion de los productos
-  mostrarVer(Info: Producto){
-
-// Cambio estado del modal a true (ahora es visible)
+ mostrarVer(info: Producto){
   this.modalVisible = true;
 
-// Guardo en variable seleccionado la informacion de producto elegido
-  this.productoSeleccionado = Info
-
+  this.productoSeleccionado = info;
 }
 }

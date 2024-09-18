@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 // TODAS LAS VISTAS DEL MÓDULO PRODUCTO
 import { ProductoComponent } from './pages/producto/producto.component';
-import { JuegosComponent } from './pages/juegos/juegos.component';
+import { DlcComponent } from './pages/dlc/dlc.component';
+import { SoporteComponent } from './pages/soporte/soporte.component';
 
 const routes: Routes = [
   {
@@ -11,8 +12,12 @@ const routes: Routes = [
 
   },
   {
-    path:"juegos",component:JuegosComponent,
+    path:"dlc",component:DlcComponent,
 
+  },
+  {
+    path:"soporte",component:SoporteComponent,
+    
   }
 ];  
 

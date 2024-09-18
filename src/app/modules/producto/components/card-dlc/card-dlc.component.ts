@@ -3,9 +3,9 @@ import { Producto } from 'src/app/models/producto';
 import { CrudService } from 'src/app/modules/admin/service/crud.service';
 
 @Component({
-  selector: 'app-card-juegos',
-  templateUrl: './card-juegos.component.html',
-  styleUrls: ['./card-juegos.component.css']
+  selector: 'app-card-dlc',
+  templateUrl: './card-dlc.component.html',
+  styleUrls: ['./card-dlc.component.css']
 })
 export class CardJuegosComponent {
 
@@ -13,7 +13,7 @@ export class CardJuegosComponent {
   coleccionProductos: Producto[] = []
 
   // Coleccion de productos de una sola categoria
-  coleccionJuegos: Producto[] = []
+  coleccionDlc: Producto[] = []
 
   // Variable para seleccionar productos especificos
   productoSeleccionado!: Producto;
@@ -32,17 +32,21 @@ export class CardJuegosComponent {
 
     // Mostrara la coleccion de esa categoria hasta el momento
     this.coleccionProductos = producto;
+
+    this.mostrarProductosDlc();
     })
+
+   
   }
 
   // Funcion para filtrar los productos de tipo "juegos"
-  mostrarProductosJuegos(){
-    this.coleccionJuegos.forEach(Producto => {
+  mostrarProductosDlc(){
+    this.coleccionProductos.forEach(producto => {
       // Si es de un tipo de "juego" -> condicional
-      if(Producto.categoria === "Juegos"){
+      if(producto.categoria === "Dlc"){
 
       // Lo sube/ guarda en la coleccion de productos de tipo "juegos"  
-      this.coleccionJuegos.push(Producto)
+      this.coleccionDlc.push(producto)
       }
     })
   }

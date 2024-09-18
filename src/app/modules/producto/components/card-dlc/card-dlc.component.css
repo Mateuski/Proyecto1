@@ -1,6 +1,3 @@
-h5{
-    text-align: center;
-}
 h2{
     color: white;
     text-align: center;
@@ -12,8 +9,9 @@ h2{
 }
 .card{
     width: 400px;
-    height: 600px;
+    height: 450px;
     display: block;
+    text-align: left;
 }
 .contenido{
     padding: 1%;
@@ -21,7 +19,7 @@ h2{
     margin: 5%; 
     border: 1px solid rgb(0, 174, 255);
     display: flex;
-}   
+}
 .mg-3{
     text-align: center;
     margin: 10px;

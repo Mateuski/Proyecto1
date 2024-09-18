@@ -1,17 +1,13 @@
 <!-- Card para mostrar TODOS los productos que el admin ingrese a la base de datos -->
 <div class="row">
-  <div class="col-lg-3" *ngFor="let productos of coleccionProductos">
+  <div class="col-lg-3" *ngFor="let productos of coleccionDlc">
     <div class="contenido">
       <div class="card">
         <img src="{{productos.imagen}}" class="imagencard" alt="{{productos.alt}}">
         <div class="card-body">
-          <div class="card-body">
-            <h5 class="card-title"><b>{{productos.nombre}}</b></h5>
-            <p class="card-text"><small class="text-body-secondary">{{productos.lanzamiento}}</small></p>
-            <p class="card-text">{{productos.descripcion}}</p>
-            <p class="card-text"><small class="text-body-secondary">ᴅᴇꜱᴀʀʀᴏʟʟᴀᴅᴏʀ: {{productos.desarrollador}}</small></p>
-            <p class="card-text"><small class="text-body-secondary">ᴇᴅɪᴛᴏʀ: {{productos.editor}}</small></p>
-            <p><b>${{productos.precio}} USD </b>
+          <h5 class="card-title"><b>{{productos.nombre}}</b></h5>
+          <p class="card-text">{{productos.descripcion}}</p>
+          <p class="card-text">${{productos.precio}} USD</p>
           <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#verMas"
             (click)="mostrarVer(productos)">Ver más</button>
         </div>
@@ -32,12 +28,9 @@
       <div class="modal-body">
         <img src="{{productoSeleccionado.imagen}}" alt="{{productoSeleccionado.alt}}">
       </div>
-
       <div class="mg-3">
-        <h3> Ya disponible </h3>
-        <h4> Lo más vendido </h4>
+        {{productoSeleccionado.descripcion}}
       </div>
-
       <div class="mg-3">
         ${{productoSeleccionado.precio}} USD
       </div>
