@@ -32,13 +32,13 @@ ngOnInit(): void{
 }
  // Funcion para filtrar los productos de tipo "juegos"
  mostrarProductosJuegos(){
-  this.coleccionJuegos.forEach(Producto => {
+  this.coleccionJuegos.forEach(producto => {
     // Si es de un tipo de "juego" -> condicional
-    if(Producto.categoria !== "Dlc" && Producto.categoria !== "SoundTracks"){
+    if(producto.categoria !== "Dlc" && producto.categoria !== "Soundtracks"){
 
     // Lo sube/ guarda en la coleccion de productos de tipo "juegos"  
-    this.coleccionJuegos.push(Producto)
-    }
+    this.coleccionJuegos.push(producto)
+    } 
   })
 }
 

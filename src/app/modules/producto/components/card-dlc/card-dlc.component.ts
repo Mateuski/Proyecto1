@@ -43,7 +43,7 @@ export class CardJuegosComponent {
   mostrarProductosDlc(){
     this.coleccionProductos.forEach(producto => {
       // Si es de un tipo de "juego" -> condicional
-      if(producto.categoria === "Dlc"){
+      if(producto.categoria === "Dlc" || producto.categoria === "Soundtracks"){
 
       // Lo sube/ guarda en la coleccion de productos de tipo "juegos"  
       this.coleccionDlc.push(producto)
@@ -55,5 +55,10 @@ export class CardJuegosComponent {
     this.modalVisible = true;
 
     this.productoSeleccionado = info;
+ }
+ isExpanded = false; // Estado inicial
+
+ toggleText() {
+   this.isExpanded = !this.isExpanded; // Cambia el estado
  }
 }

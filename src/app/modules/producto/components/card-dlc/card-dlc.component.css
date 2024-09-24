@@ -1,26 +1,47 @@
-h2{
+h2 {
     color: white;
     text-align: center;
 }
-.imagencard{
+
+.imagencard {
     width: 100%;
     height: 135px;
     border-radius: 2%;
 }
-.card{
+
+.card {
     width: 400px;
     height: 450px;
     display: block;
     text-align: left;
 }
-.contenido{
+
+.contenido {
     padding: 1%;
     border-radius: 1%;
     margin: 5%; 
     border: 1px solid rgb(0, 174, 255);
     display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-.mg-3{
+
+/* Agrega el efecto de elevación en hover */
+.contenido:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.parrafo {
+    max-height: 100px; /* Altura máxima del párrafo */
+    overflow: hidden; /* Oculta el contenido que excede la altura */
+    transition: max-height 0.5s ease;
+}
+
+.parrafo.expanded {
+    max-height: 200rem; /* Altura máxima cuando está expandido */
+}
+
+.mg-3 {
     text-align: center;
     margin: 10px;
 }
