@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Producto } from 'src/app/models/producto';
 import { CrudService } from 'src/app/modules/admin/service/crud.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-card-dlc',
@@ -21,6 +22,27 @@ export class CardJuegosComponent {
   // Variable para manejar estado del modal
   modalVisible: boolean = false;
 
+
+  productoAnadido(producto: Producto) {
+
+    try {
+
+      Swal.fire({
+        title: 'Perfecto!',
+        text: `Ha añadido ${producto.nombre} al carrito`,
+        icon: 'info'
+      })
+    }
+    catch (error) {
+      Swal.fire({
+        title: '¡Oh no!',
+        text: 'Ha ocurrido un error\n' + error,
+        icon: 'error'
+      })
+    }
+  }
+
+
   // Patentamos de forma local el servicio para acceder en el
   constructor(public servicioCrud: CrudService){}
 
@@ -38,6 +60,7 @@ export class CardJuegosComponent {
 
    
   }
+
 
   // Funcion para filtrar los productos de tipo "juegos"
   mostrarProductosDlc(){

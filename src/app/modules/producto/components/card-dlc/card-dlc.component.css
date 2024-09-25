@@ -8,10 +8,12 @@ h2 {
     height: 135px;
     border-radius: 2%;
 }
-
+.card-title{
+    text-align: center;
+}
 .card {
     width: 400px;
-    height: 450px;
+    height: 480px;
     display: block;
     text-align: left;
 }
@@ -22,7 +24,7 @@ h2 {
     margin: 5%; 
     border: 1px solid rgb(0, 174, 255);
     display: flex;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1000px 1000px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -44,4 +46,7 @@ h2 {
 .mg-3 {
     text-align: center;
     margin: 10px;
+}
+button{
+    display: flex;
 }

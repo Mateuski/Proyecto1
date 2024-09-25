@@ -21,7 +21,7 @@ p{
     margin: 10px; 
     border: 1px solid rgb(0, 174, 255);
     display: flex;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 800px 1000px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -30,3 +30,10 @@ p{
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 } 
+@media (min-width: 300px) and (max-width: 700px){
+    
+}
+
+@media (min-width: 700px){
+
+}

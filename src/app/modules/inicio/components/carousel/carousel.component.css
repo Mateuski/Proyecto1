@@ -7,3 +7,12 @@ h1{
     justify-content: center;    
     display: block;
 }
+.parrafo{
+    max-height: 100px; /*altura maxima del parrafo*/
+    overflow: hidden; /*oculta el contenido que excede la altura*/
+    transition:max-height 0.5s ease;
+}
+
+.parrafo.expanded{
+    max-height: 200rem; /*altura maxima cuando se expande*/
+}
