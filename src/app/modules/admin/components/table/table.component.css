@@ -1,0 +1,8 @@
+.button2{
+    display: flex;
+    justify-content: left
+}
+.button1{
+    display: flex;
+    justify-content: right;
+}

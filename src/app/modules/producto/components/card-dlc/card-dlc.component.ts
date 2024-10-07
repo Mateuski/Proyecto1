@@ -10,78 +10,67 @@ import Swal from 'sweetalert2';
 })
 export class CardJuegosComponent {
 
-  // Colleccion de todos los productos de forma local
-  coleccionProductos: Producto[] = []
+  // Colección de todos los productos de forma local
+  coleccionProductos: Producto[] = [];
 
-  // Coleccion de productos de una sola categoria
-  coleccionDlc: Producto[] = []
+  // Colección de productos de una sola categoría
+  coleccionDlc: Producto[] = [];
 
-  // Variable para seleccionar productos especificos
+  // Variable para seleccionar productos específicos
   productoSeleccionado!: Producto;
 
   // Variable para manejar estado del modal
   modalVisible: boolean = false;
 
+  constructor(public servicioCrud: CrudService) {}
+
+  ngOnInit(): void {
+    // Accedemos al método 'obtenerProducto' y nos suscribimos a los cambios
+    this.servicioCrud.obtenerProducto().subscribe(producto => {
+      this.coleccionProductos = producto;
+      this.mostrarProductosDlc();
+    });
+  }
+
+  // Función para filtrar y ordenar los productos de tipo "Dlc"
+  mostrarProductosDlc() {
+    this.coleccionDlc = []; // Asegúrate de reiniciar la colección
+
+    this.coleccionProductos.forEach(producto => {
+      if (producto.categoria === "Dlc" || producto.categoria === "Soundtracks") {
+        this.coleccionDlc.push(producto);
+      }
+    });
+
+    // Ordenar la colección Dlc por nombre
+    this.coleccionDlc.sort((a, b) => a.nombre.localeCompare(b.nombre));
+  }
+
+  mostrarVer(info: Producto) {
+    this.modalVisible = true;
+    this.productoSeleccionado = info;
+  }
 
   productoAnadido(producto: Producto) {
-
     try {
-
       Swal.fire({
         title: 'Perfecto!',
         text: `Ha añadido ${producto.nombre} al carrito`,
         icon: 'info'
-      })
-    }
-    catch (error) {
+      });
+    } catch (error) {
       Swal.fire({
         title: '¡Oh no!',
         text: 'Ha ocurrido un error\n' + error,
         icon: 'error'
-      })
+      });
     }
   }
 
+  isExpanded = false; // Estado inicial
 
-  // Patentamos de forma local el servicio para acceder en el
-  constructor(public servicioCrud: CrudService){}
-
-  // Inicializa al momento que renderiza el componente
-  ngOnInit(): void{
-    // Accedemos a metodo 'obtenerProducto' y nos suscribimos a los cambios
-    // recibimos notificacion ante modificaciones
-    this.servicioCrud.obtenerProducto().subscribe(producto => {
-
-    // Mostrara la coleccion de esa categoria hasta el momento
-    this.coleccionProductos = producto;
-
-    this.mostrarProductosDlc();
-    })
-
-   
+  toggleText() {
+    this.isExpanded = !this.isExpanded; // Cambia el estado
   }
-
-
-  // Funcion para filtrar los productos de tipo "juegos"
-  mostrarProductosDlc(){
-    this.coleccionProductos.forEach(producto => {
-      // Si es de un tipo de "juego" -> condicional
-      if(producto.categoria === "Dlc" || producto.categoria === "Soundtracks"){
-
-      // Lo sube/ guarda en la coleccion de productos de tipo "juegos"  
-      this.coleccionDlc.push(producto)
-      }
-    })
-  }
-  
-   mostrarVer(info: Producto){
-    this.modalVisible = true;
-
-    this.productoSeleccionado = info;
- }
- isExpanded = false; // Estado inicial
-
- toggleText() {
-   this.isExpanded = !this.isExpanded; // Cambia el estado
- }
 }
+  
