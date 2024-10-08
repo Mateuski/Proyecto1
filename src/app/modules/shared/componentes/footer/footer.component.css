@@ -1,14 +1,43 @@
-footer{
-    height: 15%;
-    width: auto;
+@media (min-width: 300px) and (max-width: 700px) {
+    mat-toolbar {
+        background-color: rgb(38, 40, 41);
+        color: white;
+    }
 }
 
-p{
+footer {
+    height: 25%;
+    width: 100%;
     background-color: rgb(38, 40, 41);
     color: white;
     text-align: center;
 }
-img{
-    width: 2%;
-    height: 2%;
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+    justify-content: center;
+}
+
+img {
+    width: 2em;
+    height: 1.5em;
+}
+
+@media (min-width: 700px) {
+    mat-toolbar {
+        background-color: rgb(38, 40, 41);
+    }
+
+    #menuSecciones {
+        display: none;
+    }
+
+    .row {
+        margin: 30px;
+    }
 }

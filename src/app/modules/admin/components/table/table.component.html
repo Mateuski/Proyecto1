@@ -1,15 +1,14 @@
 <!-- BOTÓN DE AGREGAR NUEVOS PRODUCTOS -->
- <div class="button1">
-    <div class="button2">
+
 <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agregarProducto">
     Agregar un nuevo producto
 </button>
-</div>
+
 <!-- BOTÓN PARA ORDENAR LOS PRODUCTOS ALFABÉTICAMENTE -->
-<button type="button" class="btn btn-outline-secondary" (click)="ordenarProductos()">
+<button type="button1" class="btn btn-outline-secondary" (click)="ordenarProductos()">
     Ordenar Productos Alfabéticamente
 </button>
-</div>
+
 <!-- TABLA DE PRODUCTOS -->
 <table class="table">
     <thead>
@@ -72,11 +71,13 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Ingrese una descripción:</label>
-                    <input class="form-control" type="text" formControlName="descripcion" placeholder="Ej.: Videojuego Gta V">
+                    <input class="form-control" type="text" formControlName="descripcion"
+                        placeholder="Ej.: Videojuego Gta V">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Ingrese el desarrollador:</label>
-                    <input class="form-control" type="text" formControlName="desarrollador" placeholder="Ej.: Rockstar Games">
+                    <input class="form-control" type="text" formControlName="desarrollador"
+                        placeholder="Ej.: Rockstar Games">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Ingrese el editor:</label>
@@ -84,7 +85,8 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Ingrese la fecha de lanzamiento:</label>
-                    <input class="form-control" type="text" formControlName="lanzamiento" placeholder="Ej.: 3 DE FEB 2019">
+                    <input class="form-control" type="text" formControlName="lanzamiento"
+                        placeholder="Ej.: 3 DE FEB 2019">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Ingrese el precio:</label>
@@ -101,7 +103,8 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Ingrese una imagen:</label>
-                    <input class="form-control" type="text" formControlName="imagen" placeholder="Ingrese vínculo de una imagen">
+                    <input class="form-control" type="text" formControlName="imagen"
+                        placeholder="Ingrese vínculo de una imagen">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Ingrese texto alternativo de la imagen:</label>
@@ -109,7 +112,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-success" (click)="agregarProducto()" data-bs-dismiss="modal">Guardar</button>
+                <button type="button" class="btn btn-outline-success" (click)="agregarProducto()"
+                    data-bs-dismiss="modal">Guardar</button>
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
             </div>
         </div>
@@ -117,7 +121,8 @@
 </div>
 
 <!--MODAL PARA EDITAR UN PRODUCTO-->
-<div class="modal fade" *ngFor="let productoedit of coleccionProductos" id="editarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" *ngFor="let productoedit of coleccionProductos" id="editarProducto" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -127,15 +132,18 @@
             <div [formGroup]="producto" class="modal-body">
                 <div class="mb-3">
                     <label class="form-label">Ingrese el nombre del producto:</label>
-                    <input class="form-control" type="text" formControlName="nombre" placeholder="{{productoedit.nombre}}">
+                    <input class="form-control" type="text" formControlName="nombre"
+                        placeholder="{{productoedit.nombre}}">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Ingrese una descripción:</label>
-                    <input class="form-control" type="text" formControlName="descripcion" placeholder="{{productoedit.descripcion}}">
+                    <input class="form-control" type="text" formControlName="descripcion"
+                        placeholder="{{productoedit.descripcion}}">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Ingrese el precio:</label>
-                    <input class="form-control" type="number" formControlName="precio" placeholder="{{productoedit.precio}}">
+                    <input class="form-control" type="number" formControlName="precio"
+                        placeholder="{{productoedit.precio}}">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Selecciona una categoría:</label>
@@ -148,7 +156,8 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Ingrese una imagen:</label>
-                    <input class="form-control" type="text" formControlName="imagen" placeholder="{{productoedit.imagen}}">
+                    <input class="form-control" type="text" formControlName="imagen"
+                        placeholder="{{productoedit.imagen}}">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Ingrese texto alternativo de la imagen:</label>
@@ -156,7 +165,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-success" (click)="editarProducto()" data-bs-dismiss="modal">Guardar</button>
+                <button type="button" class="btn btn-outline-success" (click)="editarProducto()"
+                    data-bs-dismiss="modal">Guardar</button>
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
             </div>
         </div>
@@ -164,7 +174,8 @@
 </div>
 
 <!-- MODAL PARA ELIMINAR UN PRODUCTO -->
-<div class="modal fade" *ngIf="modalVisibleproducto" id="eliminarproducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" *ngIf="modalVisibleproducto" id="eliminarproducto" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -176,7 +187,8 @@
                 <img src="{{productoSeleccionado.imagen}}" alt="{{productoSeleccionado.alt}}">
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" (click)="borrarProducto()">Eliminar</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal"
+                    (click)="borrarProducto()">Eliminar</button>
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
             </div>
         </div>

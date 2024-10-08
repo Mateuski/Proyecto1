@@ -1,17 +1,22 @@
 <mat-toolbar>
     <!-- Menú desplegable para cuando la pantalla sea menor a 700px -->
      
-<button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+<button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" routerLink="/inicio">
     <mat-icon><img src="https://png.pngtree.com/png-clipart/20220911/original/pngtree-letter-s-logo-vector-design-png-image_8545049.png "></mat-icon>
 </button>
-<div class="contenido">
+  <div class="contenido">
     <span><button mat-button routerLink="/inicio"><b>Ƨᴛᴏᴍ</b></button></span>
-  
     <span><button mat-button routerLink="/producto">ᴘʀᴏᴅᴜᴄᴛᴏꜱ</button></span>
     <span><button mat-button routerLink="/dlc">ᴇxᴛʀᴀꜱ</button></span>
     <span><button mat-button routerLink="/soporte">ꜱᴏᴘᴏʀᴛᴇ</button></span>
   </div>
-  
+
+  <button id="menuSecciones" mat-button [matMenuTriggerFor]="producto"><mat-icon>menu</mat-icon></button>
+  <mat-menu #producto="matMenu">
+    <span><button mat-button routerLink="/producto">ᴘʀᴏᴅᴜᴄᴛᴏꜱ</button></span>
+    <span><button mat-button routerLink="/dlc">ᴇxᴛʀᴀꜱ</button></span>
+    <span><button mat-button routerLink="/soporte">ꜱᴏᴘᴏʀᴛᴇ</button></span>
+  </mat-menu>
     <span class="example-spacer"></span>
     <!-- Menú desplegable para manejar todo el acceso de los usuarios en la página -->
     <button mat-icon-button [matMenuTriggerFor]="usuario"><mat-icon>person</mat-icon></button>
