@@ -6,16 +6,22 @@
 }
 
 footer {
-    height: 25%;
+    height: 30%;
     width: 100%;
+    
     background-color: rgb(38, 40, 41);
     color: white;
     text-align: center;
+    position: relative;
 }
-
+.container{
+    max-height: 1200px;
+}
 ul {
     display: flex;
     justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
 li {
@@ -25,7 +31,7 @@ li {
 
 img {
     width: 2em;
-    height: 1.5em;
+    height: 2em;
 }
 
 @media (min-width: 700px) {
