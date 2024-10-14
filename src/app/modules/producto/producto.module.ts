@@ -9,6 +9,8 @@ import { SoporteComponent } from './pages/soporte/soporte.component';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { CardComponent } from './components/card/card.component';
 import { CardJuegosComponent } from './components/card-dlc/card-dlc.component';
+import { OfertasComponent } from './pages/ofertas/ofertas.component';
+import { CardsofertasComponent } from './components/cardsofertas/cardsofertas.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { CardJuegosComponent } from './components/card-dlc/card-dlc.component';
     SoporteComponent,
     ProductoComponent,
     CardComponent,
-    CardJuegosComponent
+    CardJuegosComponent,
+    OfertasComponent,
+    CardsofertasComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +31,9 @@ import { CardJuegosComponent } from './components/card-dlc/card-dlc.component';
     CardJuegosComponent,
     CardComponent,
     DlcComponent,
-    SoporteComponent
+    SoporteComponent,
+    OfertasComponent,
+    CardsofertasComponent
   ]
 })
 export class ProductoModule { }

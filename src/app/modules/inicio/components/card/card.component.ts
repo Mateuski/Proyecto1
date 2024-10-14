@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Juegos } from 'src/app/models/juegos';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-card',
@@ -44,30 +45,7 @@ export class CardComponent {
   desarrollador: "Quantic Dream",
   editor:"Quantic Dream", 
 },
-/*
-{
-  id: "",
-  nombre: "Ready or Not",
-  precio: 32,
-  descripcion: "Los Sueños. El LSPD informa de un gran aumento de los delitos en toda el área metropolitana de Los Sueños. Los SWAT tratan de solventar situaciones de alto riesgo como tomas de rehenes, amenazas de bomba y sospechosos atrincherados, entre otros.",
-  genero: "Acción, Aventura, Indie",
-  lanzamiento:"ꜰᴇᴄʜᴀ ᴅᴇ ʟᴀɴᴢᴀᴍɪᴇɴᴛᴏ: 13 DIC 2023" ,
-  imagen: "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23D79Q/75010fbaec4849f6b9e9896eed23e806.jpg/f/ready-or-not.jpg",
-  desarrollador: "VOID Interactive",
-  editor:"VOID Interactive", 
-},
-{
-  id: "",
-  nombre: "",
-  precio: 0,
-  descripcion: "",
-  genero: "",
-  lanzamiento:"ꜰᴇᴄʜᴀ ᴅᴇ ʟᴀɴᴢᴀᴍɪᴇɴᴛᴏ:" ,
-  imagen: "",
-  desarrollador: "",
-  editor:"", 
-},
-*/
     ]
   }
 }
+

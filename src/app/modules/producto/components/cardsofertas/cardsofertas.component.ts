@@ -4,43 +4,46 @@ import { CrudService } from 'src/app/modules/admin/service/crud.service';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  selector: 'app-cardsofertas',
+  templateUrl: './cardsofertas.component.html',
+  styleUrls: ['./cardsofertas.component.css']
 })
-export class CardComponent {
-  // Definimos colección de productos locales
-  coleccionProductos: Producto[] = [];
-  coleccionJuegos: Producto[] = [];
+export class CardsofertasComponent {
 
-  // Variable local para manejar estado de un modal
+  // Colección de todos los productos de forma local
+  coleccionProductos: Producto[] = [];
+
+  // Colección de productos de una sola categoría
+  coleccionOfertas: Producto[] = [];
+
+  // Variable para seleccionar productos específicos
   productoSeleccionado!: Producto;
 
-  // Variable local para manejar estado de un modal
+  // Variable para manejar estado del modal
   modalVisible: boolean = false;
 
   constructor(public servicioCrud: CrudService) {}
 
   ngOnInit(): void {
+    // Accedemos al método 'obtenerProducto' y nos suscribimos a los cambios
     this.servicioCrud.obtenerProducto().subscribe(producto => {
       this.coleccionProductos = producto;
-      this.mostrarProductosJuegos();
+      this.mostrarProductosDlc();
     });
   }
 
-  // Función para filtrar y ordenar los productos de tipo "juegos"
-  mostrarProductosJuegos() {
-    this.coleccionJuegos = []; // Reiniciar la colección
+  // Función para filtrar y ordenar los productos de tipo "Dlc"
+  mostrarProductosDlc() {
+    this.coleccionOfertas = []; // Asegúrate de reiniciar la colección
 
     this.coleccionProductos.forEach(producto => {
-      // Si no es de tipo "Dlc" o "Soundtracks", se añade a la colección de juegos
-      if (producto.categoria !== "Dlc" && producto.categoria !== "Soundtracks" && producto.categoria !== "Ofertas") {
-        this.coleccionJuegos.push(producto);
+      if (producto.categoria === "Ofertas") {
+        this.coleccionOfertas.push(producto);
       }
     });
 
-    // Ordenar la colección de juegos por nombre
-    this.coleccionJuegos.sort((a, b) => a.nombre.localeCompare(b.nombre));
+    // Ordenar la colección Dlc por nombre
+    this.coleccionOfertas.sort((a, b) => a.nombre.localeCompare(b.nombre));
   }
 
   mostrarVer(info: Producto) {
@@ -63,4 +66,11 @@ export class CardComponent {
       });
     }
   }
+
+  isExpanded = false; // Estado inicial
+
+  toggleText() {
+    this.isExpanded = !this.isExpanded; // Cambia el estado
+  }
 }
+  
