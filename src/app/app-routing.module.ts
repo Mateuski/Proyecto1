@@ -7,10 +7,6 @@ const routes: Routes = [
   {
     path:"",component: InicioComponent
   },
-  // CARGA PEREZOSA -> RUTA AL MÓDULO INICIO
-  // loadChildren: Indica que será ruta hija del módulo raíz
-  // ()=>: Función flecha que importará la dirección del módulo
-  // .then: Promesa que nos devolerá un valor resuelto o rechazado
   {
     path:"",loadChildren:()=>import('./modules/inicio/inicio.module').then(m=>m.InicioModule)
   },

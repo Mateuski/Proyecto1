@@ -27,6 +27,7 @@ ul {
 li {
     list-style: none;
     justify-content: center;
+    margin: 2px;
 }
 
 img {
@@ -44,6 +45,6 @@ img {
     }
 
     .row {
-        margin: 30px;
+        margin: 35px;
     }
 }

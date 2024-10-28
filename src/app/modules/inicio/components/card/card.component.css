@@ -17,7 +17,6 @@ p {
     margin: 5px;
 }
 
-
 .contenido {
     width: 85%;
     padding: 0.5%;
@@ -29,31 +28,38 @@ p {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Agrega el efecto de elevación en hover */
 .contenido:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+.precio-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px; 
+}
+
 @media (min-width: 300px) and (max-width: 700px) {
     .container {
         display: flex;
-        flex-direction: column; /* Asegura que las cards estén en una columna */
-        align-items: center; /* Opcional: centrar las cards horizontalmente */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .card {
-        width: 95%; /* Ajusta el ancho para ser más responsivo */
-        max-width: 400px; /* Mantén un ancho máximo */
-        margin: 5px auto; /* Centra la card con márgenes */
+        width: 95%; 
+        max-width: 400px; 
+        margin: 5px auto; 
         border-radius: 12px;
         overflow: hidden;
         border: 1px solid rgb(255, 255, 255);
         display: flex;
-        flex-direction: column; /* Asegúrate de que el cuerpo crezca verticalmente */
+        flex-direction: column; 
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s, box-shadow 0.3s;
     }
+    
     .card-body {
         padding: 20px;
         background-color: #f9f9f9;
@@ -62,4 +68,5 @@ p {
         overflow-y: auto;
     }
 }
+
 @media (min-width: 700px) {}

@@ -1,4 +1,7 @@
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
@@ -13,6 +16,7 @@ h1 {
 .container {
     max-width: 600px;
     max-height: 800px;
+    overflow-y: auto;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
@@ -38,17 +42,6 @@ label {
     box-sizing: border-box;
 }
 
-.form-control:focus, textarea:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-textarea {
-    resize: vertical;
-    margin-bottom: 15px; /* Espacio inferior para separación */
-}
-
 button {
     width: 100%;
     padding: 10px;
@@ -64,31 +57,24 @@ button:hover {
     background-color: #0056b3;
 }
 
-label {
-    text-align: center;
-    color: black;
-}
-
 .reviews-container {
     margin-top: 30px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
 }
 
 .review {
-    margin-bottom: 20px;
-    padding: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.review h3 {
-    margin: 0;
-    color: #333;
-}
-
-.review p {
-    margin: 5px 0;
+footer {
+    background-color: rgb(38, 40, 41);
+    color: white;
+    text-align: center;
+    padding: 20px;
 }

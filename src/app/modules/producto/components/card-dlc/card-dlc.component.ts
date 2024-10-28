@@ -22,7 +22,7 @@ export class CardJuegosComponent {
   // Variable para manejar estado del modal
   modalVisible: boolean = false;
 
-  constructor(public servicioCrud: CrudService) {}
+  constructor(public servicioCrud: CrudService) { }
 
   ngOnInit(): void {
     // Accedemos al método 'obtenerProducto' y nos suscribimos a los cambios
@@ -54,15 +54,26 @@ export class CardJuegosComponent {
   productoAnadido(producto: Producto) {
     try {
       Swal.fire({
-        title: 'Perfecto!',
-        text: `Ha añadido ${producto.nombre} al carrito`,
+        title: 'Lo sentimos,',
+        text: 'Ocurrio un error, carrito en mantenimiento',
         icon: 'info'
       });
     } catch (error) {
       Swal.fire({
-        title: '¡Oh no!',
-        text: 'Ha ocurrido un error\n' + error,
+        title: 'Lo sentimos,',
+        text: 'Ha ocurrido un error, carrito en mantenimiento\n' + error,
         icon: 'error'
+        /*  Swal.fire({
+           title: 'Perfecto!',
+           text: `Ha añadido ${producto.nombre} al carrito`,
+           icon: 'info'
+         });
+       } catch (error) {
+         Swal.fire({
+           title: '¡Oh no!',
+           text: 'Ha ocurrido un error\n' + error,
+           icon: 'error'
+           */
       });
     }
   }
@@ -73,4 +84,3 @@ export class CardJuegosComponent {
     this.isExpanded = !this.isExpanded; // Cambia el estado
   }
 }
-  
