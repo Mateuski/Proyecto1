@@ -23,7 +23,9 @@ export class TableComponent {
     lanzamiento: new FormControl('', Validators.required),
     categoria: new FormControl('', Validators.required),
     imagen: new FormControl('', Validators.required),
-    alt: new FormControl('', Validators.required)
+    alt: new FormControl('', Validators.required),
+    requisitosminimos: new FormControl('',Validators.required),
+    requisitosrecomendados: new FormControl('',Validators.required)
   });
 
   constructor(public servicioCrud: CrudService) { }
@@ -48,7 +50,9 @@ export class TableComponent {
         lanzamiento: this.producto.value.lanzamiento!,
         categoria: this.producto.value.categoria!,
         imagen: this.producto.value.imagen!,
-        alt: this.producto.value.alt!
+        alt: this.producto.value.alt!,
+        requisitosminimos: this.producto.value.requisitosminimos!,
+        requisitosrecomendados: this.producto.value.requisitosrecomendados!
       };
 
       await this.servicioCrud.crearProducto(nuevoProducto)
@@ -87,7 +91,9 @@ export class TableComponent {
       lanzamiento: productoSeleccionado.lanzamiento,
       categoria: productoSeleccionado.categoria,
       imagen: productoSeleccionado.imagen,
-      alt: productoSeleccionado.alt
+      alt: productoSeleccionado.alt,
+      requisitosminimos: productoSeleccionado.requisitosminimos,
+      requisitosrecomendados: productoSeleccionado.requisitosrecomendados
     });
   }
 
@@ -102,7 +108,9 @@ export class TableComponent {
       lanzamiento: this.producto.value.lanzamiento!,
       categoria: this.producto.value.categoria!,
       imagen: this.producto.value.imagen!,
-      alt: this.producto.value.alt!
+      alt: this.producto.value.alt!,
+      requisitosminimos: this.producto.value.requisitosminimos!,
+      requisitosrecomendados: this.producto.value.requisitosrecomendados!
     };
 
     this.servicioCrud.modificarProducto(this.productoSeleccionado.idProducto, datos)

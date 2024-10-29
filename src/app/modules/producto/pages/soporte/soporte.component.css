@@ -2,11 +2,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
 }
-
+h2{
+    text-align: center;
+}
 h1 {
     text-align: center;
     color: white;
@@ -14,16 +15,20 @@ h1 {
 }
 
 .container {
-    max-width: 600px;
-    max-height: 800px;
-    overflow-y: auto;
+    display: flex;
+    max-width: 900px; /* Ajusta el ancho total de la contenedor */
     margin: 0 auto;
+        overflow-y: auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.form-container {
+    flex: 1; /* Permite que ocupe el espacio disponible */
+    margin-right: 20px; 
+}
 .col {
     margin-bottom: 15px;
 }
@@ -77,4 +82,19 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+}
+.faq-container {
+    flex: 1; /* Permite que ocupe el espacio disponible */
+}
+
+.faq-container h2 {
+    margin-bottom: 15px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
 }

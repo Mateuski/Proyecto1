@@ -8,7 +8,6 @@
 footer {
     height: 30%;
     width: 100%;
-    
     background-color: rgb(38, 40, 41);
     color: white;
     text-align: center;
@@ -39,11 +38,6 @@ img {
     mat-toolbar {
         background-color: rgb(38, 40, 41);
     }
-
-    #menuSecciones {
-        display: none;
-    }
-
     .row {
         margin: 35px;
     }
