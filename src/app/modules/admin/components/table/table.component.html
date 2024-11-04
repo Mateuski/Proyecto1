@@ -14,15 +14,15 @@
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Imagen</th> 
-            <th scope="col">Nombre</th> 
-            <th scope="col">Precio</th> 
-            <th scope="col">Descripción</th> 
+            <th scope="col">Imagen</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Descripción</th>
             <th scope="col">Desarrollador</th>
             <th scope="col">Editor</th>
             <th scope="col">Lanzamiento</th>
-            <th scope="col">Categoría</th> 
-            <th scope="col">Acciones</th>   
+            <th scope="col">Categoría</th>
+            <th scope="col">Acciones</th>
         </tr>
     </thead>
 
@@ -111,27 +111,6 @@
                     <label class="form-label">Ingrese texto alternativo de la imagen:</label>
                     <input class="form-control" type="text" formControlName="alt" placeholder="Ej.: Portada de Gta V">
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Ingrese los requisitos minimos:</label>
-                    <input class="form-control" type="text" formControlName="alt" placeholder="Ej. Mínimo: Requiere un procesador y un sistema operativo de 64 bits
-                    SO: Windows 10 de 64 bits
-                    Procesador: Intel Core 2 Quad CPU Q6600 a 2,4 GHz (4 CPU)/AMD Phenom 9850 Quad-Core (4 CPU) a 2,5 GHz.
-                    Memoria: 4 GB de RAM
-                    Gráficos: NVIDIA 9800 GT 1 GB/AMD HD 4870 1 GB (DX 10, 10.1, 11).
-                    Almacenamiento: 120 GB de espacio disponible
-                    Tarjeta de sonido: compatible con DirectX 10.">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Ingrese los requisitos recomendados:</label>
-                    <input class="form-control" type="text" formControlName="alt" placeholder="Ej. Recomendado: Requiere un procesador y un sistema operativo de 64 bits
-                    SO: Windows 10 de 64 bits
-                    Procesador: Intel Core i5 3470 a 3,2 GHz (4 CPU)/AMD X8 FX-8350 a 4 GHz (8 CPU).
-                    Memoria: 8 GB de RAM
-                    Gráficos: NVIDIA GTX 660 2 GB/AMD HD7870 2 GB.
-                    Almacenamiento: 120 GB de espacio disponible
-                    Tarjeta de sonido: compatible con DirectX 10.">
-                </div>
-            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-success" (click)="agregarProducto()"
                     data-bs-dismiss="modal">Guardar</button>
@@ -184,26 +163,6 @@
                 <div class="mb-3">
                     <label class="form-label">Ingrese texto alternativo de la imagen:</label>
                     <input class="form-control" type="text" formControlName="alt" placeholder="{{productoedit.alt}}">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Ingrese los requisitos minimos:</label>
-                    <input class="form-control" type="text" formControlName="alt" placeholder="Ej. Mínimo: Requiere un procesador y un sistema operativo de 64 bits
-                    SO: Windows 10 de 64 bits
-                    Procesador: Intel Core 2 Quad CPU Q6600 a 2,4 GHz (4 CPU)/AMD Phenom 9850 Quad-Core (4 CPU) a 2,5 GHz.
-                    Memoria: 4 GB de RAM
-                    Gráficos: NVIDIA 9800 GT 1 GB/AMD HD 4870 1 GB (DX 10, 10.1, 11).
-                    Almacenamiento: 120 GB de espacio disponible
-                    Tarjeta de sonido: compatible con DirectX 10.">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Ingrese los requisitos recomendados:</label>
-                    <input class="form-control" type="text" formControlName="alt" placeholder="Ej. Recomendado: Requiere un procesador y un sistema operativo de 64 bits
-                    SO: Windows 10 de 64 bits
-                    Procesador: Intel Core i5 3470 a 3,2 GHz (4 CPU)/AMD X8 FX-8350 a 4 GHz (8 CPU).
-                    Memoria: 8 GB de RAM
-                    Gráficos: NVIDIA GTX 660 2 GB/AMD HD7870 2 GB.
-                    Almacenamiento: 120 GB de espacio disponible
-                    Tarjeta de sonido: compatible con DirectX 10.">
                 </div>
             </div>
             <div class="modal-footer">

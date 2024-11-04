@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Juegos } from 'src/app/models/juegos';
+import { Producto } from 'src/app/models/producto';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -8,7 +9,10 @@ import Swal from 'sweetalert2';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
+  productoSeleccionado!: Producto;
   public info: Juegos[];
+
+
 
   constructor(){
     this.info = [
@@ -46,6 +50,21 @@ export class CardComponent {
   editor:"Quantic Dream", 
 },
     ]
+  }
+  productoAnadido(producto: Producto) {
+    try {
+      Swal.fire({
+        title: 'Lo sentimos!',
+        text: 'Ocurrio un error, carrito en mantenimiento',
+        icon: 'info'
+      });
+    } catch (error) {
+      Swal.fire({
+        title: 'Lo sentimos!',
+        text: 'Ha ocurrido un error, carrito en mantenimiento\n' + error,
+        icon: 'error'
+      });
+    }
   }
 }
 

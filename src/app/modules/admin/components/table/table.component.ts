@@ -24,8 +24,6 @@ export class TableComponent {
     categoria: new FormControl('', Validators.required),
     imagen: new FormControl('', Validators.required),
     alt: new FormControl('', Validators.required),
-    requisitosminimos: new FormControl('',Validators.required),
-    requisitosrecomendados: new FormControl('',Validators.required)
   });
 
   constructor(public servicioCrud: CrudService) { }
@@ -51,8 +49,6 @@ export class TableComponent {
         categoria: this.producto.value.categoria!,
         imagen: this.producto.value.imagen!,
         alt: this.producto.value.alt!,
-        requisitosminimos: this.producto.value.requisitosminimos!,
-        requisitosrecomendados: this.producto.value.requisitosrecomendados!
       };
 
       await this.servicioCrud.crearProducto(nuevoProducto)
@@ -82,6 +78,7 @@ export class TableComponent {
 
   mostrarEditar(productoSeleccionado: Producto) {
     this.productoSeleccionado = productoSeleccionado;
+    
     this.producto.setValue({
       nombre: productoSeleccionado.nombre,
       precio: productoSeleccionado.precio,
@@ -92,8 +89,6 @@ export class TableComponent {
       categoria: productoSeleccionado.categoria,
       imagen: productoSeleccionado.imagen,
       alt: productoSeleccionado.alt,
-      requisitosminimos: productoSeleccionado.requisitosminimos,
-      requisitosrecomendados: productoSeleccionado.requisitosrecomendados
     });
   }
 
@@ -109,8 +104,6 @@ export class TableComponent {
       categoria: this.producto.value.categoria!,
       imagen: this.producto.value.imagen!,
       alt: this.producto.value.alt!,
-      requisitosminimos: this.producto.value.requisitosminimos!,
-      requisitosrecomendados: this.producto.value.requisitosrecomendados!
     };
 
     this.servicioCrud.modificarProducto(this.productoSeleccionado.idProducto, datos)

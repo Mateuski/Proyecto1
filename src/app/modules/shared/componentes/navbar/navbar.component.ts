@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/modules/autentificacion/page/services/auth.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+import { Producto } from 'src/app/models/producto';
 
 @Component({
   selector: 'app-navbar',
@@ -10,6 +12,7 @@ import { Router } from '@angular/router';
 export class NavbarComponent {
   logueado = true; // booleana para manejo de registro y el inicio de sesión
   deslogueado = false; // booleana para manejo de cierre de sesión
+  productoSeleccionado!: Producto;
 
   constructor(
     public servicioAuth: AuthService,
@@ -51,4 +54,33 @@ export class NavbarComponent {
       }
     }
   }
+  carrito(producto: Producto) {
+    try {
+      Swal.fire({
+        title: 'Lo sentimos!',
+        text: 'Ocurrio un error, carrito en mantenimiento',
+        icon: 'info'
+      });
+    } catch (error) {
+      Swal.fire({
+        title: 'Lo sentimos!',
+        text: 'Ha ocurrido un error, carrito en mantenimiento\n' + error,
+        icon: 'error'
+  /*  try {
+      Swal.fire({
+        title: 'Perfecto!',
+        text: `Ha añadido ${producto.nombre} al carrito`,
+        icon: 'info'  
+      });
+    } catch (error) {
+      Swal.fire({
+        title: '¡Oh no!',
+        text: 'Ha ocurrido un error\n' + error,
+        icon: 'error'
+*/
+      });
+    }
+  }
 }
+
+

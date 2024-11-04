@@ -12,8 +12,8 @@
             <p class="card-text"><small class="text-body-secondary">ᴇᴅɪᴛᴏʀ: {{productos.editor}}</small></p>
             <div class="piecard">
               <p><b>${{productos.precio}} USD </b></p>
-              <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#verMas"
-                (click)="mostrarVer(productos)">Ver más</button>
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal"
+              (click)="productoAnadido(productoSeleccionado)">Agregar al carrito</button>
             </div>
           </div>
         </div>

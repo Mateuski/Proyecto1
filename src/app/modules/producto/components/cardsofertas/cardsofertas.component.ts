@@ -54,13 +54,13 @@ export class CardsofertasComponent {
   productoAnadido(producto: Producto) {
     try {
       Swal.fire({
-        title: 'Lo sentimos,',
+        title: 'Lo sentimos!',
         text: 'Ocurrio un error, carrito en mantenimiento',
         icon: 'info'
       });
     } catch (error) {
       Swal.fire({
-        title: 'Lo sentimos,',
+        title: 'Lo sentimos!',
         text: 'Ha ocurrido un error, carrito en mantenimiento\n' + error,
         icon: 'error'
         /* Swal.fire({
@@ -76,11 +76,5 @@ export class CardsofertasComponent {
            */
       });
     }
-  }
-
-  isExpanded = false; // Estado inicial
-
-  toggleText() {
-    this.isExpanded = !this.isExpanded; // Cambia el estado
   }
 }

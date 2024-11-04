@@ -51,13 +51,13 @@ export class CardComponent {
   productoAnadido(producto: Producto) {
     try {
       Swal.fire({
-        title: 'Lo sentimos,',
+        title: 'Lo sentimos!',
         text: 'Ocurrio un error, carrito en mantenimiento',
         icon: 'info'
       });
     } catch (error) {
       Swal.fire({
-        title: 'Lo sentimos,',
+        title: 'Lo sentimos!',
         text: 'Ha ocurrido un error, carrito en mantenimiento\n' + error,
         icon: 'error'
   /*  try {
