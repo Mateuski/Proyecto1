@@ -14,14 +14,14 @@
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Imagen</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Descripción</th>
+            <th scope="col">Imagen</th> 
+            <th scope="col">Nombre</th> 
+            <th scope="col">Precio</th> 
+            <th scope="col">Descripción</th> 
             <th scope="col">Desarrollador</th>
             <th scope="col">Editor</th>
             <th scope="col">Lanzamiento</th>
-            <th scope="col">Categoría</th>
+            <th scope="col">Categoría</th> 
             <th scope="col">Acciones</th>
         </tr>
     </thead>
@@ -111,6 +111,7 @@
                     <label class="form-label">Ingrese texto alternativo de la imagen:</label>
                     <input class="form-control" type="text" formControlName="alt" placeholder="Ej.: Portada de Gta V">
                 </div>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-success" (click)="agregarProducto()"
                     data-bs-dismiss="modal">Guardar</button>
@@ -132,8 +133,7 @@
             <div [formGroup]="producto" class="modal-body">
                 <div class="mb-3">
                     <label class="form-label">Ingrese el nombre del producto:</label>
-                    <input class="form-control" type="text" formControlName="nombre"
-                        placeholder="{{productoedit.nombre}}">
+                    <input class="form-control" type="text" formControlName="nombre" placeholder="{{productoedit.nombre}}">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Ingrese una descripción:</label>
@@ -141,17 +141,30 @@
                         placeholder="{{productoedit.descripcion}}">
                 </div>
                 <div class="mb-3">
+                    <label class="form-label">Ingrese el desarrollador:</label>
+                    <input class="form-control" type="text" formControlName="desarrollador"
+                        placeholder="{{productoedit.desarrollador}}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Ingrese el editor:</label>
+                    <input class="form-control" type="text" formControlName="editor" placeholder="{{productoedit.editor}}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Ingrese la fecha de lanzamiento:</label>
+                    <input class="form-control" type="text" formControlName="lanzamiento"
+                        placeholder="{{productoedit.lanzamiento}}">
+                </div>
+                <div class="mb-3">
                     <label class="form-label">Ingrese el precio:</label>
-                    <input class="form-control" type="number" formControlName="precio"
-                        placeholder="{{productoedit.precio}}">
+                    <input class="form-control" type="number" formControlName="precio" placeholder="{{productoedit.precio}}">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Selecciona una categoría:</label>
                     <select class="form-control" formControlName="categoria" class="form-select">
                         <option value="" disabled>Elija una opción</option>
-                        <option value="Videojuego">Videojuego</option>
+                        <option value="Juegos">Videojuego</option>
                         <option value="Ofertas">Ofertas</option>
-                        <option value="Dlc">Dlc</option>
+                        <option value="Extras">Dlc</option>
                         <option value="Soundtracks">Soundtracks</option>
                     </select>
                 </div>

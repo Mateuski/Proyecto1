@@ -17,17 +17,22 @@
     <span><button mat-button routerLink="/producto">ᴘʀᴏᴅᴜᴄᴛᴏꜱ</button></span>
     <span><button mat-button routerLink="/dlc">ᴇxᴛʀᴀꜱ</button></span>
     <span><button mat-button routerLink="/ofertas">ᴏ🇫ᴇʀᴛᴀꜱ</button></span>
-    <span><button mat-button routerLink="/soporte">ꜱᴏᴘᴏʀᴛᴇ</button></span>
+    <span><button mat-button routerLink="/soporte">ꜱᴏᴘᴏʀᴛᴇ</button></span> 
   </mat-menu>
+    <span class="example-spacer"></span> 
+
     <span class="example-spacer"></span>
+    <button id="menuAdmin" mat-button routerLink="/admin">ᴀᴅᴍɪɴ</button>
     <!-- Menú desplegable para manejar todo el acceso de los usuarios en la página -->
     <button mat-icon-button [matMenuTriggerFor]="usuario"><mat-icon>person</mat-icon></button>
     <mat-menu #usuario="matMenu">
       <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/registro">ʀᴇɢɪꜱᴛʀᴀʀꜱᴇ</button>
       <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/iniciosesion">ɪɴɪᴄɪᴀʀ ꜱᴇꜱɪᴏɴ</button>
       <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">ᴄᴇʀʀᴀʀ ꜱᴇꜱɪᴏɴ</button>
-    </mat-menu>
   
+    </mat-menu>
+
+    
     <!-- Carrito -->
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="carrito(productoSeleccionado)">
       <mat-icon>shopping_cart</mat-icon>

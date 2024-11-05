@@ -2,54 +2,40 @@
     <div class="row">
         <h1>ʀᴇɢɪꜱᴛʀᴀᴛᴇ</h1>
 
-        <i id="person" class="material-icons" style="font-size: 200px;">person</i>
+        <i class="material-icons" style="font-size: 200px;">person</i>
         
-        <!-- Nombre de usuario -->
         <mat-form-field appearance="fill">
-            <mat-label>ɪɴɢʀᴇꜱᴇ ᴜɴ ɴᴏᴍʙʀᴇ ᴅᴇ ᴜꜱᴜᴀʀɪᴏ:</mat-label>
+            <mat-label>ɪɴɢʀᴇꜱᴇ ꜱᴜ ɴᴏᴍʙʀᴇ ᴅᴇ ᴜꜱᴜᴀʀɪᴏ:</mat-label>
             <!-- ngModel = directiva BIDIRECCIONAL utilizada para formularios -->
-            <input [(ngModel)]="usuarios.nombre" matInput placeholder="Ej: Pepitogamerpro" required>
+            <input [(ngModel)]="usuarios.nombreusuario" matInput placeholder="Ej: AlejoXDeath" required>
         </mat-form-field>
 
-        <!-- Nombre de usuario -->
         <mat-form-field appearance="fill">
-            <mat-label>ɪɴɢʀᴇꜱᴇ ᴜɴ ɴᴏᴍʙʀᴇ:</mat-label>
+            <mat-label>ɪɴɢʀᴇꜱᴇ ꜱᴜ ɴᴏᴍʙʀᴇ:</mat-label>
             <!-- ngModel = directiva BIDIRECCIONAL utilizada para formularios -->
             <input [(ngModel)]="usuarios.nombre" matInput placeholder="Ej: Alejo" required>
         </mat-form-field>
 
-        <!-- Apellido de usuario -->
         <mat-form-field appearance="fill">
             <mat-label>ɪɴɢʀᴇꜱᴇ ꜱᴜ ᴀᴘᴇʟʟɪᴅᴏ:</mat-label>
             <input [(ngModel)]="usuarios.apellido" matInput placeholder="Ej: Ferrada" required>
         </mat-form-field>
 
-        <!-- Email de usuario -->
         <mat-form-field appearance="fill">
             <mat-label>ɪɴɢʀᴇꜱᴇ ꜱᴜ ᴇᴍᴀɪʟ:</mat-label>
             <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: alejoferrada2022@gmail.com" required>
         </mat-form-field>
 
-        <!-- Rol de usuario -->
         <mat-form-field>
-            <mat-label>ꜱᴇʟᴇᴄᴄɪᴏɴᴇ ʀᴏʟ ᴅᴇ ᴜꜱᴜᴀʀɪᴏ::</mat-label>
-            <select [(ngModel)]="usuarios.rol" matNativeControl required>
-              <option value="admin"> ᴀᴅᴍɪɴɪꜱᴛʀᴀᴅᴏʀ </option>
-              <option value="vist"> ᴠɪꜱɪᴛᴀɴᴛᴇ </option>
-            </select>
-        </mat-form-field>
-
-        <!-- Contraseña de usuario -->
-        <mat-form-field>
-            <mat-label>ɪɴɢʀᴇꜱᴇ ꜱᴜ ᴄᴏɴᴛʀᴀꜱᴇñᴀ:</mat-label>
+            <mat-label>ɪɴɢʀᴇꜱᴇ ꜱᴜ ᴄᴏɴᴛʀᴇñᴀ:</mat-label>
             <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
-            <mat-hint align="start">ᴍɪɴɪᴍᴏ:6/{{input.value.length}}</mat-hint>
+            <mat-hint align="start">Mínimo:6/{{input.value.length}}</mat-hint>
         </mat-form-field>
 
         <!-- Botón para ENVIAR la información a la Base de Datos-->
-        <button class="boton" mat-raised-button color="primary" (click)="registrar()">ʀᴇɢɪꜱᴛʀᴀʀ    </button>
+        <button class="boton" mat-raised-button color="primary" (click)="registrar()">Registrar</button>
     </div>
 </div>
