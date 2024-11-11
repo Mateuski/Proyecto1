@@ -22,6 +22,7 @@
             <th scope="col">Editor</th>
             <th scope="col">Lanzamiento</th>
             <th scope="col">Categoría</th> 
+            <th scope="col">Stock</th> 
             <th scope="col">Acciones</th>
         </tr>
     </thead>
@@ -40,6 +41,7 @@
             <td>{{producto.editor}}</td>
             <td>{{producto.lanzamiento}}</td>
             <td>{{producto.categoria}}</td>
+            <td>{{producto.stock}}</td>
 
             <!-- ACCIONES -->
             <td>
@@ -111,6 +113,10 @@
                     <label class="form-label">Ingrese texto alternativo de la imagen:</label>
                     <input class="form-control" type="text" formControlName="alt" placeholder="Ej.: Portada de Gta V">
                 </div>
+                <div class="mb-3">
+                    <label for="form-label">Ingrese la cantidad de stock correspondiente:</label>
+                    <input class="form-control" type="number" formControlName="stock" placeholder="Ej.: 10">
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-success" (click)="agregarProducto()"
@@ -176,6 +182,10 @@
                 <div class="mb-3">
                     <label class="form-label">Ingrese texto alternativo de la imagen:</label>
                     <input class="form-control" type="text" formControlName="alt" placeholder="{{productoedit.alt}}">
+                </div>
+                <div class="mb-3">
+                    <label for="form-label">Ingrese la cantidad de stock correspondiente:</label>
+                    <input class="form-control" type="number" formControlName="stock" placeholder="{{productoedit.stock}}">
                 </div>
             </div>
             <div class="modal-footer">
