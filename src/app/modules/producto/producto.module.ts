@@ -9,8 +9,8 @@ import { SoporteComponent } from './pages/soporte/soporte.component';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { CardComponent } from './components/card/card.component';
 import { CardJuegosComponent } from './components/card-dlc/card-dlc.component';
-import { OfertasComponent } from './pages/ofertas/ofertas.component';
-import { CardsofertasComponent } from './components/cardsofertas/cardsofertas.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -18,22 +18,20 @@ import { CardsofertasComponent } from './components/cardsofertas/cardsofertas.co
     SoporteComponent,
     ProductoComponent,
     CardComponent,
-    CardJuegosComponent,
-    OfertasComponent,
-    CardsofertasComponent
+    CardJuegosComponent
   ],
   imports: [
     CommonModule,
-    ProductoRoutingModule
+    ProductoRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     ProductoComponent,
     CardJuegosComponent,
     CardComponent,
     DlcComponent,
-    SoporteComponent,
-    OfertasComponent,
-    CardsofertasComponent
+    SoporteComponent
   ]
 })
 export class ProductoModule { }

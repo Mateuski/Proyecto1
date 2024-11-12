@@ -5,7 +5,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { DlcComponent } from './pages/dlc/dlc.component';
 import { SoporteComponent } from './pages/soporte/soporte.component';
-import { OfertasComponent } from './pages/ofertas/ofertas.component';
 
 const routes: Routes = [
   {
@@ -20,10 +19,6 @@ const routes: Routes = [
     path:"soporte",component:SoporteComponent,
     
   },
-  {
-    path:"ofertas",component:OfertasComponent,
-    
-  }
 ];  
 
 @NgModule({

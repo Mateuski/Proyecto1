@@ -19,7 +19,11 @@ export class CardComponent {
   // Variable local para manejar estado de un modal
   modalVisible: boolean = false;
 
-  constructor(public servicioCrud: CrudService) {}
+  stock: number = 0;
+
+  constructor(
+    public servicioCrud: CrudService,
+  ) { }
 
   ngOnInit(): void {
     this.servicioCrud.obtenerProducto().subscribe(producto => {
@@ -48,6 +52,9 @@ export class CardComponent {
     this.productoSeleccionado = info;
   }
 
+  agregarProducto(info: Producto) {
+  }
+
   productoAnadido(producto: Producto) {
     try {
       Swal.fire({
@@ -60,18 +67,18 @@ export class CardComponent {
         title: 'Lo sentimos!',
         text: 'Ha ocurrido un error, carrito en mantenimiento\n' + error,
         icon: 'error'
-  /*  try {
-      Swal.fire({
-        title: 'Perfecto!',
-        text: `Ha añadido ${producto.nombre} al carrito`,
-        icon: 'info'  
-      });
-    } catch (error) {
-      Swal.fire({
-        title: '¡Oh no!',
-        text: 'Ha ocurrido un error\n' + error,
-        icon: 'error'
-*/
+        /*  try {
+            Swal.fire({
+              title: 'Perfecto!',
+              text: `Ha añadido ${producto.nombre} al carrito`,
+              icon: 'info'  
+            });
+          } catch (error) {
+            Swal.fire({
+              title: '¡Oh no!',
+              text: 'Ha ocurrido un error\n' + error,
+              icon: 'error'
+      */
       });
     }
   }

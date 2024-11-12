@@ -9,5 +9,4 @@ export interface Producto {
     categoria: string;
     imagen: string;
     alt: string;
-    stock: number;
 }
